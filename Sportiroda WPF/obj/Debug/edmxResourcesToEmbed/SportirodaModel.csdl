@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sportirodaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="nevezes">
+    <Key>
+      <PropertyRef Name="nevezes_id" />
+    </Key>
+    <Property Name="nevezes_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="verseny_id" Type="Int32" />
+    <Property Name="versenyzo_id" Type="Int32" />
+    <NavigationProperty Name="verseny" Relationship="Self.FK_nevezes_verseny" FromRole="nevezes" ToRole="verseny" />
+    <NavigationProperty Name="versenyzo" Relationship="Self.FK_nevezes_versenyzo" FromRole="nevezes" ToRole="versenyzo" />
+  </EntityType>
+  <EntityType Name="tipus">
+    <Key>
+      <PropertyRef Name="tipus_id" />
+    </Key>
+    <Property Name="tipus_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nev" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="verseny" Relationship="Self.FK_verseny_tipus" FromRole="tipus" ToRole="verseny" />
+  </EntityType>
+  <EntityType Name="verseny">
+    <Key>
+      <PropertyRef Name="verseny_id" />
+    </Key>
+    <Property Name="verseny_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tipus_id" Type="Int32" />
+    <Property Name="nevezesi_dij" Type="Int32" />
+    <Property Name="datum" Type="DateTime" Precision="0" />
+    <Property Name="kezdesido" Type="Time" Precision="7" />
+    <Property Name="szintido" Type="Time" Precision="7" />
+    <NavigationProperty Name="nevezes" Relationship="Self.FK_nevezes_verseny" FromRole="verseny" ToRole="nevezes" />
+    <NavigationProperty Name="tipus" Relationship="Self.FK_verseny_tipus" FromRole="verseny" ToRole="tipus" />
+  </EntityType>
+  <EntityType Name="versenyzo">
+    <Key>
+      <PropertyRef Name="versenyzo_id" />
+    </Key>
+    <Property Name="versenyzo_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nev" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="szuldatum" Type="DateTime" Precision="0" />
+    <Property Name="nem" Type="Int32" />
+    <Property Name="email" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="nevezes" Relationship="Self.FK_nevezes_versenyzo" FromRole="versenyzo" ToRole="nevezes" />
+  </EntityType>
+  <EntityType Name="OsszesAdat">
+    <Key>
+      <PropertyRef Name="nevezes_id" />
+      <PropertyRef Name="nem" />
+    </Key>
+    <Property Name="nevezes_id" Type="Int32" Nullable="false" />
+    <Property Name="vnev" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="szuldatum" Type="Int32" />
+    <Property Name="nem" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nev" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="datum" Type="DateTime" Precision="0" />
+    <Property Name="kezdesido" Type="Time" Precision="7" />
+    <Property Name="szintido" Type="Time" Precision="7" />
+    <Property Name="nevezesi_dij" Type="Int32" />
+    <Property Name="email" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_nevezes_verseny">
+    <End Role="verseny" Type="Self.verseny" Multiplicity="0..1" />
+    <End Role="nevezes" Type="Self.nevezes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="verseny">
+        <PropertyRef Name="verseny_id" />
+      </Principal>
+      <Dependent Role="nevezes">
+        <PropertyRef Name="verseny_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_nevezes_versenyzo">
+    <End Role="versenyzo" Type="Self.versenyzo" Multiplicity="0..1" />
+    <End Role="nevezes" Type="Self.nevezes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="versenyzo">
+        <PropertyRef Name="versenyzo_id" />
+      </Principal>
+      <Dependent Role="nevezes">
+        <PropertyRef Name="versenyzo_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_verseny_tipus">
+    <End Role="tipus" Type="Self.tipus" Multiplicity="0..1" />
+    <End Role="verseny" Type="Self.verseny" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tipus">
+        <PropertyRef Name="tipus_id" />
+      </Principal>
+      <Dependent Role="verseny">
+        <PropertyRef Name="tipus_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="sportirodaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="nevezes" EntityType="Self.nevezes" />
+    <EntitySet Name="tipus" EntityType="Self.tipus" />
+    <EntitySet Name="verseny" EntityType="Self.verseny" />
+    <EntitySet Name="versenyzo" EntityType="Self.versenyzo" />
+    <EntitySet Name="OsszesAdat" EntityType="Self.OsszesAdat" />
+    <AssociationSet Name="FK_nevezes_verseny" Association="Self.FK_nevezes_verseny">
+      <End Role="verseny" EntitySet="verseny" />
+      <End Role="nevezes" EntitySet="nevezes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_nevezes_versenyzo" Association="Self.FK_nevezes_versenyzo">
+      <End Role="versenyzo" EntitySet="versenyzo" />
+      <End Role="nevezes" EntitySet="nevezes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_verseny_tipus" Association="Self.FK_verseny_tipus">
+      <End Role="tipus" EntitySet="tipus" />
+      <End Role="verseny" EntitySet="verseny" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

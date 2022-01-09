@@ -1,0 +1,63 @@
+C:\Users\adurugy\source\repos\Sportiroda WPF\bin\Debug\Sportiroda WPF.exe.config
+C:\Users\adurugy\source\repos\Sportiroda WPF\bin\Debug\Sportiroda WPF.exe
+C:\Users\adurugy\source\repos\Sportiroda WPF\bin\Debug\Sportiroda WPF.pdb
+C:\Users\adurugy\source\repos\Sportiroda WPF\bin\Debug\EntityFramework.dll
+C:\Users\adurugy\source\repos\Sportiroda WPF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\adurugy\source\repos\Sportiroda WPF\bin\Debug\EntityFramework.xml
+C:\Users\adurugy\source\repos\Sportiroda WPF\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\adurugy\source\repos\Sportiroda WPF\obj\Debug\Sportiroda WPF.csprojAssemblyReference.cache
+C:\Users\adurugy\source\repos\Sportiroda WPF\obj\Debug\MainWindow.g.cs
+C:\Users\adurugy\source\repos\Sportiroda WPF\obj\Debug\App.g.cs
+C:\Users\adurugy\source\repos\Sportiroda WPF\obj\Debug\Sportiroda WPF_Content.g.cs
+C:\Users\adurugy\source\repos\Sportiroda WPF\obj\Debug\Sportiroda WPF_MarkupCompile.cache
+C:\Users\adurugy\source\repos\Sportiroda WPF\obj\Debug\Sportiroda WPF_MarkupCompile.lref
+C:\Users\adurugy\source\repos\Sportiroda WPF\obj\Debug\MainWindow.baml
+C:\Users\adurugy\source\repos\Sportiroda WPF\obj\Debug\Sportiroda WPF.g.resources
+C:\Users\adurugy\source\repos\Sportiroda WPF\obj\Debug\Sportiroda_WPF.Properties.Resources.resources
+C:\Users\adurugy\source\repos\Sportiroda WPF\obj\Debug\Sportiroda WPF.csproj.GenerateResource.cache
+C:\Users\adurugy\source\repos\Sportiroda WPF\obj\Debug\Sportiroda WPF.csproj.CoreCompileInputs.cache
+C:\Users\adurugy\source\repos\Sportiroda WPF\obj\Debug\Sportiroda WPF.csproj.CopyComplete
+C:\Users\adurugy\source\repos\Sportiroda WPF\obj\Debug\Sportiroda WPF.exe
+C:\Users\adurugy\source\repos\Sportiroda WPF\obj\Debug\Sportiroda WPF.pdb
+C:\Users\Rendszergazda.ADAM\Desktop\Sportiroda WPF\bin\Debug\Sportiroda WPF.exe.config
+C:\Users\Rendszergazda.ADAM\Desktop\Sportiroda WPF\bin\Debug\Sportiroda WPF.exe
+C:\Users\Rendszergazda.ADAM\Desktop\Sportiroda WPF\bin\Debug\Sportiroda WPF.pdb
+C:\Users\Rendszergazda.ADAM\Desktop\Sportiroda WPF\bin\Debug\EntityFramework.dll
+C:\Users\Rendszergazda.ADAM\Desktop\Sportiroda WPF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Rendszergazda.ADAM\Desktop\Sportiroda WPF\bin\Debug\EntityFramework.xml
+C:\Users\Rendszergazda.ADAM\Desktop\Sportiroda WPF\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Rendszergazda.ADAM\Desktop\Sportiroda WPF\obj\Debug\Sportiroda WPF.csprojAssemblyReference.cache
+C:\Users\Rendszergazda.ADAM\Desktop\Sportiroda WPF\obj\Debug\MainWindow.g.cs
+C:\Users\Rendszergazda.ADAM\Desktop\Sportiroda WPF\obj\Debug\App.g.cs
+C:\Users\Rendszergazda.ADAM\Desktop\Sportiroda WPF\obj\Debug\Sportiroda WPF_Content.g.cs
+C:\Users\Rendszergazda.ADAM\Desktop\Sportiroda WPF\obj\Debug\Sportiroda WPF_MarkupCompile.cache
+C:\Users\Rendszergazda.ADAM\Desktop\Sportiroda WPF\obj\Debug\Sportiroda WPF_MarkupCompile.lref
+C:\Users\Rendszergazda.ADAM\Desktop\Sportiroda WPF\obj\Debug\MainWindow.baml
+C:\Users\Rendszergazda.ADAM\Desktop\Sportiroda WPF\obj\Debug\Sportiroda WPF.g.resources
+C:\Users\Rendszergazda.ADAM\Desktop\Sportiroda WPF\obj\Debug\Sportiroda_WPF.Properties.Resources.resources
+C:\Users\Rendszergazda.ADAM\Desktop\Sportiroda WPF\obj\Debug\Sportiroda WPF.csproj.GenerateResource.cache
+C:\Users\Rendszergazda.ADAM\Desktop\Sportiroda WPF\obj\Debug\Sportiroda WPF.csproj.CoreCompileInputs.cache
+C:\Users\Rendszergazda.ADAM\Desktop\Sportiroda WPF\obj\Debug\Sportiroda WPF.csproj.CopyComplete
+C:\Users\Rendszergazda.ADAM\Desktop\Sportiroda WPF\obj\Debug\Sportiroda WPF.exe
+C:\Users\Rendszergazda.ADAM\Desktop\Sportiroda WPF\obj\Debug\Sportiroda WPF.pdb
+C:\Users\Rendszergazda.ADAM\Documents\GitHub\WPF\Sportiroda WPF\bin\Debug\Sportiroda WPF.exe.config
+C:\Users\Rendszergazda.ADAM\Documents\GitHub\WPF\Sportiroda WPF\bin\Debug\Sportiroda WPF.exe
+C:\Users\Rendszergazda.ADAM\Documents\GitHub\WPF\Sportiroda WPF\bin\Debug\Sportiroda WPF.pdb
+C:\Users\Rendszergazda.ADAM\Documents\GitHub\WPF\Sportiroda WPF\bin\Debug\EntityFramework.dll
+C:\Users\Rendszergazda.ADAM\Documents\GitHub\WPF\Sportiroda WPF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Rendszergazda.ADAM\Documents\GitHub\WPF\Sportiroda WPF\bin\Debug\EntityFramework.xml
+C:\Users\Rendszergazda.ADAM\Documents\GitHub\WPF\Sportiroda WPF\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Rendszergazda.ADAM\Documents\GitHub\WPF\Sportiroda WPF\obj\Debug\Sportiroda WPF.csprojAssemblyReference.cache
+C:\Users\Rendszergazda.ADAM\Documents\GitHub\WPF\Sportiroda WPF\obj\Debug\MainWindow.g.cs
+C:\Users\Rendszergazda.ADAM\Documents\GitHub\WPF\Sportiroda WPF\obj\Debug\App.g.cs
+C:\Users\Rendszergazda.ADAM\Documents\GitHub\WPF\Sportiroda WPF\obj\Debug\Sportiroda WPF_Content.g.cs
+C:\Users\Rendszergazda.ADAM\Documents\GitHub\WPF\Sportiroda WPF\obj\Debug\Sportiroda WPF_MarkupCompile.cache
+C:\Users\Rendszergazda.ADAM\Documents\GitHub\WPF\Sportiroda WPF\obj\Debug\Sportiroda WPF_MarkupCompile.lref
+C:\Users\Rendszergazda.ADAM\Documents\GitHub\WPF\Sportiroda WPF\obj\Debug\MainWindow.baml
+C:\Users\Rendszergazda.ADAM\Documents\GitHub\WPF\Sportiroda WPF\obj\Debug\Sportiroda WPF.g.resources
+C:\Users\Rendszergazda.ADAM\Documents\GitHub\WPF\Sportiroda WPF\obj\Debug\Sportiroda_WPF.Properties.Resources.resources
+C:\Users\Rendszergazda.ADAM\Documents\GitHub\WPF\Sportiroda WPF\obj\Debug\Sportiroda WPF.csproj.GenerateResource.cache
+C:\Users\Rendszergazda.ADAM\Documents\GitHub\WPF\Sportiroda WPF\obj\Debug\Sportiroda WPF.csproj.CoreCompileInputs.cache
+C:\Users\Rendszergazda.ADAM\Documents\GitHub\WPF\Sportiroda WPF\obj\Debug\Sportiroda WPF.csproj.CopyComplete
+C:\Users\Rendszergazda.ADAM\Documents\GitHub\WPF\Sportiroda WPF\obj\Debug\Sportiroda WPF.exe
+C:\Users\Rendszergazda.ADAM\Documents\GitHub\WPF\Sportiroda WPF\obj\Debug\Sportiroda WPF.pdb

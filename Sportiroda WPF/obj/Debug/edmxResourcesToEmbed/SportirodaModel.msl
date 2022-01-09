@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="sportirodaModelStoreContainer" CdmEntityContainer="sportirodaEntities">
+    <EntitySetMapping Name="nevezes">
+      <EntityTypeMapping TypeName="sportirodaModel.nevezes">
+        <MappingFragment StoreEntitySet="nevezes">
+          <ScalarProperty Name="nevezes_id" ColumnName="nevezes_id" />
+          <ScalarProperty Name="verseny_id" ColumnName="verseny_id" />
+          <ScalarProperty Name="versenyzo_id" ColumnName="versenyzo_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tipus">
+      <EntityTypeMapping TypeName="sportirodaModel.tipus">
+        <MappingFragment StoreEntitySet="tipus">
+          <ScalarProperty Name="tipus_id" ColumnName="tipus_id" />
+          <ScalarProperty Name="nev" ColumnName="nev" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="verseny">
+      <EntityTypeMapping TypeName="sportirodaModel.verseny">
+        <MappingFragment StoreEntitySet="verseny">
+          <ScalarProperty Name="verseny_id" ColumnName="verseny_id" />
+          <ScalarProperty Name="tipus_id" ColumnName="tipus_id" />
+          <ScalarProperty Name="nevezesi_dij" ColumnName="nevezesi_dij" />
+          <ScalarProperty Name="datum" ColumnName="datum" />
+          <ScalarProperty Name="kezdesido" ColumnName="kezdesido" />
+          <ScalarProperty Name="szintido" ColumnName="szintido" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="versenyzo">
+      <EntityTypeMapping TypeName="sportirodaModel.versenyzo">
+        <MappingFragment StoreEntitySet="versenyzo">
+          <ScalarProperty Name="versenyzo_id" ColumnName="versenyzo_id" />
+          <ScalarProperty Name="nev" ColumnName="nev" />
+          <ScalarProperty Name="szuldatum" ColumnName="szuldatum" />
+          <ScalarProperty Name="nem" ColumnName="nem" />
+          <ScalarProperty Name="email" ColumnName="email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OsszesAdat">
+      <EntityTypeMapping TypeName="sportirodaModel.OsszesAdat">
+        <MappingFragment StoreEntitySet="OsszesAdat">
+          <ScalarProperty Name="nevezes_id" ColumnName="nevezes_id" />
+          <ScalarProperty Name="vnev" ColumnName="vnev" />
+          <ScalarProperty Name="szuldatum" ColumnName="szuldatum" />
+          <ScalarProperty Name="nem" ColumnName="nem" />
+          <ScalarProperty Name="nev" ColumnName="nev" />
+          <ScalarProperty Name="datum" ColumnName="datum" />
+          <ScalarProperty Name="kezdesido" ColumnName="kezdesido" />
+          <ScalarProperty Name="szintido" ColumnName="szintido" />
+          <ScalarProperty Name="nevezesi_dij" ColumnName="nevezesi_dij" />
+          <ScalarProperty Name="email" ColumnName="email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sportirodaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="nevezes">
+    <Key>
+      <PropertyRef Name="nevezes_id" />
+    </Key>
+    <Property Name="nevezes_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="verseny_id" Type="int" />
+    <Property Name="versenyzo_id" Type="int" />
+  </EntityType>
+  <EntityType Name="tipus">
+    <Key>
+      <PropertyRef Name="tipus_id" />
+    </Key>
+    <Property Name="tipus_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nev" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="verseny">
+    <Key>
+      <PropertyRef Name="verseny_id" />
+    </Key>
+    <Property Name="verseny_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tipus_id" Type="int" />
+    <Property Name="nevezesi_dij" Type="int" />
+    <Property Name="datum" Type="date" />
+    <Property Name="kezdesido" Type="time" Precision="7" />
+    <Property Name="szintido" Type="time" Precision="7" />
+  </EntityType>
+  <EntityType Name="versenyzo">
+    <Key>
+      <PropertyRef Name="versenyzo_id" />
+    </Key>
+    <Property Name="versenyzo_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nev" Type="varchar" MaxLength="30" />
+    <Property Name="szuldatum" Type="date" />
+    <Property Name="nem" Type="int" />
+    <Property Name="email" Type="varchar" MaxLength="35" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'sportiroda.dbo.OsszesAdat' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="OsszesAdat">
+    <Key>
+      <PropertyRef Name="nevezes_id" />
+      <PropertyRef Name="nem" />
+    </Key>
+    <Property Name="nevezes_id" Type="int" Nullable="false" />
+    <Property Name="vnev" Type="varchar" MaxLength="30" />
+    <Property Name="szuldatum" Type="int" />
+    <Property Name="nem" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="nev" Type="varchar" MaxLength="30" />
+    <Property Name="datum" Type="date" />
+    <Property Name="kezdesido" Type="time" Precision="7" />
+    <Property Name="szintido" Type="time" Precision="7" />
+    <Property Name="nevezesi_dij" Type="int" />
+    <Property Name="email" Type="varchar" MaxLength="35" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'sportiroda.dbo.Versenyek' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Versenyek">
+          <Property Name="nev" Type="varchar" MaxLength="30" />
+          <Property Name="nevezesi_dij" Type="int" />
+          <Property Name="datum" Type="date" />
+          <Property Name="kezdesido" Type="time" Precision="7" />
+          <Property Name="szintido" Type="time" Precision="7" />
+        </EntityType>-->
+  <Association Name="FK_nevezes_verseny">
+    <End Role="verseny" Type="Self.verseny" Multiplicity="0..1" />
+    <End Role="nevezes" Type="Self.nevezes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="verseny">
+        <PropertyRef Name="verseny_id" />
+      </Principal>
+      <Dependent Role="nevezes">
+        <PropertyRef Name="verseny_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_nevezes_versenyzo">
+    <End Role="versenyzo" Type="Self.versenyzo" Multiplicity="0..1" />
+    <End Role="nevezes" Type="Self.nevezes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="versenyzo">
+        <PropertyRef Name="versenyzo_id" />
+      </Principal>
+      <Dependent Role="nevezes">
+        <PropertyRef Name="versenyzo_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_verseny_tipus">
+    <End Role="tipus" Type="Self.tipus" Multiplicity="0..1" />
+    <End Role="verseny" Type="Self.verseny" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tipus">
+        <PropertyRef Name="tipus_id" />
+      </Principal>
+      <Dependent Role="verseny">
+        <PropertyRef Name="tipus_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="sportirodaModelStoreContainer">
+    <EntitySet Name="nevezes" EntityType="Self.nevezes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tipus" EntityType="Self.tipus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="verseny" EntityType="Self.verseny" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="versenyzo" EntityType="Self.versenyzo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OsszesAdat" EntityType="Self.OsszesAdat" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [OsszesAdat].[nevezes_id] AS [nevezes_id], 
+    [OsszesAdat].[vnev] AS [vnev], 
+    [OsszesAdat].[szuldatum] AS [szuldatum], 
+    [OsszesAdat].[nem] AS [nem], 
+    [OsszesAdat].[nev] AS [nev], 
+    [OsszesAdat].[datum] AS [datum], 
+    [OsszesAdat].[kezdesido] AS [kezdesido], 
+    [OsszesAdat].[szintido] AS [szintido], 
+    [OsszesAdat].[nevezesi_dij] AS [nevezesi_dij], 
+    [OsszesAdat].[email] AS [email]
+    FROM [dbo].[OsszesAdat] AS [OsszesAdat]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_nevezes_verseny" Association="Self.FK_nevezes_verseny">
+      <End Role="verseny" EntitySet="verseny" />
+      <End Role="nevezes" EntitySet="nevezes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_nevezes_versenyzo" Association="Self.FK_nevezes_versenyzo">
+      <End Role="versenyzo" EntitySet="versenyzo" />
+      <End Role="nevezes" EntitySet="nevezes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_verseny_tipus" Association="Self.FK_verseny_tipus">
+      <End Role="tipus" EntitySet="tipus" />
+      <End Role="verseny" EntitySet="verseny" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
